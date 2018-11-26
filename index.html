@@ -22,8 +22,7 @@
 </head>
 
 <body>
-    <div class="parallax-window top_container" data-parallax="scroll" data-speed="0.8">
-        <div class="header">
+    <div class="header">
             <header>
                 <div class="logo">
                     <h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
@@ -41,6 +40,8 @@
                 </div>
             </header>
         </div>
+    <div class="parallax-window top_container" data-parallax="scroll" data-speed="0.8">
+        
 
         <div class="top_content">
             <h2>A Trip to <br> Mounntains</h2>
@@ -394,6 +395,7 @@
             <a href="about.html">About</a>
         </div>
     </div>
+    <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
     <script src="js/parallax.min.js"></script>
@@ -420,6 +422,33 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2500,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
 
         // Aos
@@ -451,7 +480,6 @@
                             },
                             complete: function () {
                                 $this.text(this.countNum);
-                                //alert('finished');
                             }
 
                         });
@@ -459,6 +487,21 @@
                 a = 1;
             }
 
+        });
+
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200); // Fade in the arrow
+                $('#return-to-top').css('display', 'flex');
+            } else {
+                $('#return-to-top').fadeOut(200); // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function () { // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0 // Scroll to top of body
+            }, 500);
         });
     </script>
 </body>
