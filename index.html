@@ -12,10 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 
 <body>
@@ -50,63 +53,66 @@
             <h2>Best Offers</h2>
             <span>Chek out our top-rated tours</span>
         </div>
-        <div class="offers">
-            <div class="offer">
-                <div class="offer_image">
-                    <img src="images/offer1.jpg" alt="offer">
+        <div class="aos" data-aos="zoom-in-right">
+            <div class="offers">
+                <div class="offer">
+                    <div class="offer_image">
+                        <img src="images/offer1.jpg" alt="offer">
+                    </div>
+                    <div class="offer_text">
+                        <h3><a href="#">Turkey</a></h3>
+                        <p>Istanbul, Antalya, Ephesus • 8 days…</p>
+                    </div>
                 </div>
-                <div class="offer_text">
-                    <h3><a href="#">Turkey</a></h3>
-                    <p>Istanbul, Antalya, Ephesus • 8 days…</p>
+                <div class="offer">
+                    <div class="offer_image">
+                        <img src="images/offer2.jpg" alt="offer">
+                    </div>
+                    <div class="offer_text">
+                        <h3><a href="#">Spain</a></h3>
+                        <p>Madrid, Andalucia, Barcelona • 9 days….</p>
+                    </div>
                 </div>
-            </div>
-            <div class="offer">
-                <div class="offer_image">
-                    <img src="images/offer2.jpg" alt="offer">
-                </div>
-                <div class="offer_text">
-                    <h3><a href="#">Spain</a></h3>
-                    <p>Madrid, Andalucia, Barcelona • 9 days….</p>
-                </div>
-            </div>
-            <div class="offer">
-                <div class="offer_image">
-                    <img src="images/offer3.jpg" alt="offer">
-                </div>
-                <div class="offer_text">
-                    <h3><a href="#">United Kingdom</a></h3>
-                    <p>England, Scotland, Wales • 13 days…</p>
-                </div>
-            </div>
-        </div>
-        <div class="offers">
-            <div class="offer">
-                <div class="offer_image">
-                    <img src="images/offer1.jpg" alt="offer">
-                </div>
-                <div class="offer_text">
-                    <h3><a href="#">Eastern Europe</a></h3>
-                    <p>Slovenia, Hungary, Poland • 10 days…</p>
+                <div class="offer">
+                    <div class="offer_image">
+                        <img src="images/offer3.jpg" alt="offer">
+                    </div>
+                    <div class="offer_text">
+                        <h3><a href="#">United Kingdom</a></h3>
+                        <p>England, Scotland, Wales • 13 days…</p>
+                    </div>
                 </div>
             </div>
-            <div class="offer">
-                <div class="offer_image">
-                    <img src="images/offer2.jpg" alt="offer">
+            <div class="offers">
+                <div class="offer">
+                    <div class="offer_image">
+                        <img src="images/offer1.jpg" alt="offer">
+                    </div>
+                    <div class="offer_text">
+                        <h3><a href="#">Eastern Europe</a></h3>
+                        <p>Slovenia, Hungary, Poland • 10 days…</p>
+                    </div>
                 </div>
-                <div class="offer_text">
-                    <h3><a href="#">Italy</a></h3>
-                    <p>Rome, Milan, Venice • 7 days…</p>
+                <div class="offer">
+                    <div class="offer_image">
+                        <img src="images/offer2.jpg" alt="offer">
+                    </div>
+                    <div class="offer_text">
+                        <h3><a href="#">Italy</a></h3>
+                        <p>Rome, Milan, Venice • 7 days…</p>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="offer_image">
+                        <img src="images/offer3.jpg" alt="offer">
+                    </div>
+                    <div class="offer_text">
+                        <h3><a href="#">Swiss Alpsv</a></h3>
+                        <p>Zurich, Geneve, Luzern • 13 days…</p>
+                    </div>
                 </div>
             </div>
-            <div class="offer">
-                <div class="offer_image">
-                    <img src="images/offer3.jpg" alt="offer">
-                </div>
-                <div class="offer_text">
-                    <h3><a href="#">Swiss Alpsv</a></h3>
-                    <p>Zurich, Geneve, Luzern • 13 days…</p>
-                </div>
-            </div>
+
         </div>
         <div class="more_offer">
             <a href="#">View all tours</a>
@@ -128,7 +134,7 @@
         <div class="recent_title">
             <h2>Recent Post</h2>
         </div>
-        <div class="recents">
+        <div class="recents" data-aos="fade-left">
             <div class="recent">
                 <div class="recent_image">
                     <img src="images/recent1.jpg" alt="offer">
@@ -277,13 +283,121 @@
             </div>
         </div>
     </div>
+    <div class="animate_container">
+        <div class="animate_content" data-aos="fade-right" data-aos-duration="2000">
+            <div class="animate_image">
+                <img src="images/animate_images/icon-1.png" alt="icon">
+            </div>
+            <div class="animate_text" id="counter">
+                <p class="counter-value" data-count="6235">100</p>
+                <span>Happy Clients</span>
+            </div>
+        </div>
+        <div class="animate_content" data-aos="fade-down" data-aos-duration="2000">
+            <div class="animate_image">
+                <img src="images/animate_images/icon-2.png" alt="icon">
+            </div>
+            <div class="animate_text">
+                <p class="counter-value" data-count="112">0</p>
+                <span>Amazing Tours</span>
+            </div>
+        </div>
+        <div class="animate_content" data-aos="fade-up" data-aos-duration="2000">
+            <div class="animate_image">
+                <img src="images/animate_images/icon-3.png" alt="icon">
+            </div>
+            <div class="animate_text">
+                <p class="counter-value" data-count="594">0</p>
+                <span>Partners</span>
+            </div>
+        </div>
+        <div class="animate_content" data-aos="fade-left" data-aos-duration="2000">
+            <div class="animate_image">
+                <img src="images/animate_images/icon-4.png" alt="icon">
+            </div>
+            <div class="animate_text">
+                <p class="counter-value" data-count="543">0</p>
+                <span>Questions Ansvered</span>
+            </div>
+        </div>
+    </div>
+    <div class="flight_container">
+        <div class="find_content">
+            <div class="find_text">
+                <h3>Fastest Way to Compare and Book <br> over 450 Cheap Flights</h3>
+            </div>
+            <div class="more_flight">
+                <a href="#">Find your Flight</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_image">
+                <a href="index.html"><img src="images/footer-logo.png" alt="logo"></a>
+            </div>
+            <div class="footer_text">
+                <div class="text">
+                    <p>Since 2002, we have been offering travel services of the highest quality, combining our energy
+                        and
+                        enthusiasm.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_container">
+            <div class="footer_title">
+                <h4>Contact Information</h4>
+            </div>
+            <div class="footer_text">
+                <div class="text">
+                    <i class="far fa-compass"></i>
+                    <p>Since 2002, we have been offering travel services of the highest quality, combining our energy
+                        and
+                        enthusiasm.</p>
+                </div>
+                <div class="text">
+                    <i class="fas fa-phone"></i>
+                    <p>345-677-554</p>
+                </div>
+                <div class="text">
+                    <i class="fas fa-envelope"></i>
+                    <p>ashottmarkarian@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_container">
+            <div class="footer_title">
+                <h4>Follow</h4>
+            </div>
+            <div class="footer_icons">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="copy_container">
+        <div class="copy">
+            &copy; 2018 All Rights Reserved.
+        </div>
+        <div class="url">
+            <a href="contact.html">Contacts</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
-    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
-    <script src="js/jquery-ui.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         $('.top_container').parallax({
@@ -306,6 +420,45 @@
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2500,
+        });
+
+        // Aos
+
+        AOS.init();
+
+        // Counter
+
+        var a = 0;
+        $(window).scroll(function () {
+
+            var oTop = $('#counter').offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+                $('.counter-value').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                            countNum: countTo
+                        },
+
+                        {
+
+                            duration: 3000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                $this.text(this.countNum);
+                                //alert('finished');
+                            }
+
+                        });
+                });
+                a = 1;
+            }
+
         });
     </script>
 </body>
