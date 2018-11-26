@@ -111,6 +111,11 @@
             text-transform: uppercase;
             font-size: 12px;
             font-weight: 900;
+            transition: .3s ease-out;
+
+            &:hover{
+                background-color: #53b2ad;
+            }
         }
     }
 }
@@ -221,6 +226,11 @@
             font-size: 12px;
             border-radius: 40px;
             font-weight: 900;
+            transition: .3s ease-out;
+
+            &:hover{
+                background-color: #53b2ad;
+            }
         }
     }
 }
@@ -285,6 +295,11 @@
                 font-size: 15px;
                 cursor: pointer;
                 outline: none;
+                transition: .3s ease-out;
+
+                &:hover{
+                    background-color: #53b2ad;
+                }
             }
         }
     }
@@ -375,6 +390,11 @@
                         background-color: #5fc8c2;
                         font-weight: 900;
                         cursor: pointer;
+                        transition: .3s ease-out;
+                        
+                        &:hover{
+                            background-color: #53b2ad;
+                        }
                     }
 
                 }
@@ -503,6 +523,11 @@
             font-size: 12px;
             border-radius: 40px;
             font-weight: 900;
+            transition: .3s ease-out;
+
+            &:hover{
+                background-color: #53b2ad;
+            }
         }
     }
 
@@ -556,4 +581,42 @@
 .find_container{
     background-size: cover;
     background-position: 50% calc(100% + 142.1px);
+    padding: 100px 0px 100px 0px;
+    
+    .find_content{
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+
+        .find_title{
+            h3{
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 1.3;
+                color: #ffffff;
+                margin-bottom: 35px;
+            }
+        }
+        .more_find{
+    
+            a{
+                color: #ffffff;
+                background-color: #5fc8c2;
+                padding: 10px 20px;
+                font-size: 12px;
+                border-radius: 40px;
+                font-weight: 900;
+                text-transform: uppercase;
+                transition: .3s ease-out;
+
+                &:hover{
+                    background-color: #53b2ad;
+                    transition: .3s ease-out;
+                }
+            }
+        }
+    }
 }
