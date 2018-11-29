@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>OnVacation</title>
+    <link rel="icon" href="favico.icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <div class="logo_menu">
+                <div class="logo">
+                    <h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="tours.html" class="active">TOURS</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="gallery.html">GALLERY</a></li>
+                            <li><a href="contact.html">CONTACTS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="header_btn">
+                <i class="fas fa-bars" style="color:white"></i>
+            </div>
+        </header>
+    </div>
+    <div class="hidden_container">
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="tours.html" class="active">TOURS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="contact.html">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="top_container">
+        <div class="top_title">
+            <h2>ALL Tours For You</h2>
+            <p>650 tours found</p>
+        </div>
+    </div>
+    <div class="body">
+        <div class="main_container" id="tours">
+            <div class="menu">
+                <ul>
+                    <li><a href="#" class="active">All</a></li>
+                    <li><a href="#">Europe</a></li>
+                    <li><a href="#">Spain</a></li>
+                    <li><a href="#">Tour</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Trip</a></li>
+                </ul>
+            </div>
+            <div class="tour_container" v-for="item in items">
+                <div class="tour_image">
+                    <a href="#" v-if="item.image"><img :src="item.image"></a>
+                </div>
+                <div class="tour_text">
+                    <span> {{item.date}} by <a v-if="item.athor" :href="'/userxxxxxxx/'+ item.athor.id"> admin </a> In Europe</span>
+                    <h3>{{item.name}}</h3>
+                    <p>{{item.text}}</p>
+                    <a href="#" class="details"> {{item.detail}} </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_container">
+            <div class="footer_image">
+                <a href="index.html"><img src="images/footer-logo.png" alt="logo"></a>
+            </div>
+            <div class="footer_text">
+                <div class="text">
+                    <p>Since 2002, we have been offering travel services of the highest quality, combining our energy
+                        and
+                        enthusiasm.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_container">
+            <div class="footer_title">
+                <h4>Contact Information</h4>
+            </div>
+            <div class="footer_text">
+                <div class="text">
+                    <i class="far fa-compass"></i>
+                    <p>Since 2002, we have been offering travel services of the highest quality, combining our energy
+                        and
+                        enthusiasm.</p>
+                </div>
+                <div class="text">
+                    <i class="fas fa-phone"></i>
+                    <p>345-677-554</p>
+                </div>
+                <div class="text">
+                    <i class="fas fa-envelope"></i>
+                    <p>ashottmarkarian@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer_container">
+            <div class="footer_title">
+                <h4>Follow</h4>
+            </div>
+            <div class="footer_icons">
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div class="copy_container">
+        <div class="copy">
+            &copy; 2018 All Rights Reserved.
+        </div>
+        <div class="url">
+            <a href="contact.html">Contacts</a>
+            <a href="about.html">About</a>
+        </div>
+    </div>
+    <a href="javascript:" id="return-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/tours.js"></script>
+
+    <script>
+        $('.top_container').parallax({
+            imageSrc: 'images/background-38-1920x900.jpg'
+        });
+
+        // Aos
+
+        AOS.init();
+
+
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function () {
+            if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200); // Fade in the arrow
+                $('#return-to-top').css('display', 'flex');
+            } else {
+                $('#return-to-top').fadeOut(200); // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function () { // When arrow is clicked
+            $('body,html').animate({
+                scrollTop: 0 // Scroll to top of body
+            }, 500);
+        });
+
+        // Nav show
+
+        $('.header_btn').click(function () {
+            $('.hidden_container').toggleClass('show');
+        });
+    </script>
+</body>
+
+</html>

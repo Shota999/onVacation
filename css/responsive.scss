@@ -10,7 +10,7 @@ $desktop-width: 765px;
         .hidden_container{
             position: fixed;
             top: 94px;
-            right: -300px;
+            right: -380px;
             width: 300px;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
@@ -94,7 +94,14 @@ $desktop-width: 765px;
             }
         }
         .middle_container {
+            padding: 100px 100px 100px 100px;
+
             .middle_content {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+
                 .middle_title {
                     h3 {
                         font-size: 40px;
@@ -102,6 +109,14 @@ $desktop-width: 765px;
 
                     p {
                         font-size: 15px;
+                    }
+                }
+                form{
+                    flex-direction: column;
+                    border-radius: 10px;
+
+                    button{
+                        padding: 9.5px 25px 12.5px;
                     }
                 }
             }
@@ -196,11 +211,17 @@ $desktop-width: 765px;
             align-items: center;
         }
         .find_container{
+            padding: 100px 100px 100px 100px;
 
             .find_content{
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+
                 .find_title{
                     h3{
-                        font-size: 28px;
+                        font-size: 24px;
                     }
                 }
                 .more_find{
@@ -211,7 +232,14 @@ $desktop-width: 765px;
             }
         }
         .flight_container{
+            padding: 100px 100px 100px 100px;
+
             .find_content{
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+
                     h3{
                         font-size: 25px;
                     }
@@ -226,6 +254,11 @@ $desktop-width: 765px;
 }
 
 @media (max-width: #{$phone-width}) {
+    body{
+        .hidden_container{
+            width: 100%;
+        }
+    }
     .top_container{
         .top_content{
             padding-left: 30px;
@@ -247,9 +280,6 @@ $desktop-width: 765px;
         display: none;
     }
     .flight_container{
-        display: none;
-    }
-    footer{
         display: none;
     }
 }

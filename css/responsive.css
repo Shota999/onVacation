@@ -2,7 +2,7 @@
   body .hidden_container {
     position: fixed;
     top: 94px;
-    right: -300px;
+    right: -380px;
     width: 300px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
@@ -79,11 +79,35 @@
   body .top_container .top_content a {
     font-size: 10px;
   }
+  body .middle_container {
+    padding: 100px 100px 100px 100px;
+  }
+  body .middle_container .middle_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   body .middle_container .middle_content .middle_title h3 {
     font-size: 40px;
   }
   body .middle_container .middle_content .middle_title p {
     font-size: 15px;
+  }
+  body .middle_container .middle_content form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 10px;
+  }
+  body .middle_container .middle_content form button {
+    padding: 9.5px 25px 12.5px;
   }
   body .offer_container .offers {
     -webkit-box-align: center;
@@ -185,11 +209,39 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  body .find_container {
+    padding: 100px 100px 100px 100px;
+  }
+  body .find_container .find_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   body .find_container .find_content .find_title h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
   body .find_container .find_content .more_find a {
     font-size: 10px;
+  }
+  body .flight_container {
+    padding: 100px 100px 100px 100px;
+  }
+  body .flight_container .find_content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   body .flight_container .find_content h3 {
     font-size: 25px;
@@ -200,6 +252,9 @@
 }
 
 @media (max-width: 375px) {
+  body .hidden_container {
+    width: 100%;
+  }
   .top_container .top_content {
     padding-left: 30px;
   }
@@ -219,9 +274,6 @@
     display: none;
   }
   .flight_container {
-    display: none;
-  }
-  footer {
     display: none;
   }
 }
