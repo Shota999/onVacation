@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -23,7 +24,8 @@
 
 <body>
     <div class="header">
-            <header>
+        <header>
+            <div class="logo_menu">
                 <div class="logo">
                     <h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
                 </div>
@@ -38,10 +40,27 @@
                         </ul>
                     </nav>
                 </div>
-            </header>
+            </div>
+            <div class="header_btn">
+                <i class="fas fa-bars" style="color:white"></i>
+            </div>
+        </header>
+    </div>
+    <div class="hidden_container">
+        <div class="menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">HOME</a></li>
+                    <li><a href="index.html">TOURS</a></li>
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li><a href="index.html">GALLERY</a></li>
+                    <li><a href="index.html">CONTACTS</a></li>
+                </ul>
+            </nav>
         </div>
+    </div>
     <div class="parallax-window top_container" data-parallax="scroll" data-speed="0.8">
-        
+
 
         <div class="top_content">
             <h2>A Trip to <br> Mounntains</h2>
@@ -285,40 +304,46 @@
         </div>
     </div>
     <div class="animate_container">
-        <div class="animate_content" data-aos="fade-right" data-aos-duration="2000">
-            <div class="animate_image">
-                <img src="images/animate_images/icon-1.png" alt="icon">
+        <div class="animate">
+            <div class="animate_content" data-aos="fade-right" data-aos-duration="2000">
+                <div class="animate_image">
+                    <img src="images/animate_images/icon-1.png" alt="icon">
+                </div>
+                <div class="animate_text" id="counter">
+                    <p class="counter-value" data-count="6235">100</p>
+                    <span>Happy Clients</span>
+                </div>
             </div>
-            <div class="animate_text" id="counter">
-                <p class="counter-value" data-count="6235">100</p>
-                <span>Happy Clients</span>
+            <div class="animate_content" data-aos="fade-down" data-aos-duration="2000">
+                <div class="animate_image">
+                    <img src="images/animate_images/icon-2.png" alt="icon">
+                </div>
+                <div class="animate_text">
+                    <p class="counter-value" data-count="112">0</p>
+                    <span>Amazing Tours</span>
+                </div>
             </div>
+
         </div>
-        <div class="animate_content" data-aos="fade-down" data-aos-duration="2000">
-            <div class="animate_image">
-                <img src="images/animate_images/icon-2.png" alt="icon">
+        <div class="animate">
+
+            <div class="animate_content" data-aos="fade-up" data-aos-duration="2000">
+                <div class="animate_image">
+                    <img src="images/animate_images/icon-3.png" alt="icon">
+                </div>
+                <div class="animate_text">
+                    <p class="counter-value" data-count="594">0</p>
+                    <span>Partners</span>
+                </div>
             </div>
-            <div class="animate_text">
-                <p class="counter-value" data-count="112">0</p>
-                <span>Amazing Tours</span>
-            </div>
-        </div>
-        <div class="animate_content" data-aos="fade-up" data-aos-duration="2000">
-            <div class="animate_image">
-                <img src="images/animate_images/icon-3.png" alt="icon">
-            </div>
-            <div class="animate_text">
-                <p class="counter-value" data-count="594">0</p>
-                <span>Partners</span>
-            </div>
-        </div>
-        <div class="animate_content" data-aos="fade-left" data-aos-duration="2000">
-            <div class="animate_image">
-                <img src="images/animate_images/icon-4.png" alt="icon">
-            </div>
-            <div class="animate_text">
-                <p class="counter-value" data-count="543">0</p>
-                <span>Questions Ansvered</span>
+            <div class="animate_content" data-aos="fade-left" data-aos-duration="2000">
+                <div class="animate_image">
+                    <img src="images/animate_images/icon-4.png" alt="icon">
+                </div>
+                <div class="animate_text">
+                    <p class="counter-value" data-count="543">0</p>
+                    <span>Questions Ansvered</span>
+                </div>
             </div>
         </div>
     </div>
@@ -432,14 +457,7 @@
                     }
                 },
                 {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 480,
+                    breakpoint: 800,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -502,6 +520,12 @@
             $('body,html').animate({
                 scrollTop: 0 // Scroll to top of body
             }, 500);
+        });
+
+        // Nav show
+
+        $('.header_btn').click(function () {
+            $('.hidden_container').toggleClass('show');
         });
     </script>
 </body>
