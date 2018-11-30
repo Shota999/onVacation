@@ -33,10 +33,10 @@
                     <nav>
                         <ul>
                             <li><a href="index.html">HOME</a></li>
-                            <li><a href="tours.html" class="active">TOURS</a></li>
+                            <li><a href="tours.html">TOURS</a></li>
                             <li><a href="about.html">ABOUT</a></li>
                             <li><a href="gallery.html">GALLERY</a></li>
-                            <li><a href="contact.html">CONTACTS</a></li>
+                            <li><a href="contact.html" class="active">CONTACTS</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -51,44 +51,61 @@
             <nav>
                 <ul>
                     <li><a href="index.html">HOME</a></li>
-                    <li><a href="tours.html" class="active">TOURS</a></li>
+                    <li><a href="tours.html">TOURS</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="gallery.html">GALLERY</a></li>
-                    <li><a href="contact.html">CONTACTS</a></li>
+                    <li><a href="contact.html" class="active">CONTACTS</a></li>
                 </ul>
             </nav>
         </div>
     </div>
     <div class="top_container">
         <div class="top_title">
-            <h2>ALL Tours For You</h2>
-            <p>650 tours found</p>
+            <h2>Contact Us</h2>
+            <p>Let's keep in touch!</p>
         </div>
     </div>
-    <div class="body">
-        <div class="main_container" id="tours">
-            <div class="menu">
-                <ul>
-                    <li><a href="#" class="active">All</a></li>
-                    <li><a href="#">Europe</a></li>
-                    <li><a href="#">Spain</a></li>
-                    <li><a href="#">Tour</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Trip</a></li>
-                </ul>
-            </div>
-            <div class="tour_container" v-for="item in items">
-                <div class="tour_image">
-                    <a href="#" v-if="item.image"><img :src="item.image"></a>
+    <div class="contact_container">
+        <div class="contact_content">
+            <h4>Contact Our Agency</h4>
+            <p>At OnVacation we want to make sure that your trip is everything you could possibly dream of. Whether you
+                want inspiration and guidance in planning your next adventure or need help with an existing booking,
+                our travel experts are here to help.
+                Send us an email or give our team a call to book your flights, plan your adventure or get help with any
+                problems you encounter along the way. Or if you’re in New York, you can visit us in store to speak face
+                to face. Our assistance doesn’t end when you take off either. Our Global Travel Help team are on hand
+                to assist with any issues you may have.</p>
+        </div>
+        <div class="contact_content">
+            <h4>Our Contacts</h4>
+            <div class="footer_text">
+                <div class="text">
+                    <i class="far fa-compass"></i>
+                    <p>732/21 Second Street, Manchester, King Street, <br>Kingston United Kingdom</p>
                 </div>
-                <div class="tour_text">
-                    <span> {{item.date}} by <a v-if="item.athor" :href="'/userxxxxxxx/'+ item.athor.id"> admin </a></span>
-                    <h3>{{item.name}}</h3>
-                    <p>{{item.text}}</p>
-                    <a href="#" class="details">{{item.detail}}</a>
+                <div class="text">
+                    <i class="fas fa-phone"></i>
+                    <p>345-677-554</p>
+                </div>
+                <div class="text">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@info.com</p>
                 </div>
             </div>
         </div>
+        <div class="contact_content">
+            <h4>Any Questions?</h4>
+            <form action="action.php" method="get">
+                <input type="text" name="name" placeholder="Your Name">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" cols="20" rows="5" placeholder="Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <div class="map">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=London%20Eye%2C%20London%2C%20United%20Kingdom&amp;t=m&amp;z=10&amp;output=embed&amp;iwloc=near"
+            aria-label="London Eye, London, United Kingdom"></iframe>
     </div>
     <footer>
         <div class="footer_container">
@@ -164,7 +181,7 @@
 
     <script>
         $('.top_container').parallax({
-            imageSrc: 'images/background-38-1920x900.jpg'
+            imageSrc: 'images/background-27-1920x900.jpg'
         });
 
         // Aos
