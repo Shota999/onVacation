@@ -1,3 +1,24 @@
+@media (min-width: 765px) {
+  .work_container .work_images {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .work_container .work_images img {
+    margin-top: 30px;
+  }
+  .work_container .work_images img:first-child {
+    margin-top: 0;
+  }
+  .traveling_container .image {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   body .hidden_container {
     position: fixed;
@@ -248,6 +269,74 @@
   }
   body .flight_container .find_content .more_flight a {
     font-size: 10px;
+  }
+  .top_container .top_title h2 {
+    font-size: 36px;
+  }
+  .body .main_container .tour_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+  }
+  .body .main_container .tour_container .tour_image {
+    margin-right: 0;
+  }
+  .body .main_container .tour_container .tour_image a img {
+    max-width: 100%;
+    height: 100%;
+  }
+  .work_container .work_images {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .work_container .work_images img {
+    margin-top: 30px;
+  }
+  .work_container .work_images img:first-child {
+    margin-top: 0;
+  }
+  .traveling_container .image {
+    display: none;
+  }
+  .body .team_container .team {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .body .team_container .team .team_item {
+    padding-left: 6.4285rem;
+    padding-right: 6.4285rem;
+    padding-bottom: 2.78553rem;
+  }
+  .our_skills .skills .our_skills_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .our_skills .skills .our_skills_container .skills_container {
+    margin-bottom: 50px;
+  }
+  .our_skills .skills .our_skills_container .skills_container:last-child {
+    margin-bottom: 0;
+  }
+  .contact_container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact_container .contact_content form button {
+    padding: 10px 15px;
   }
 }
 

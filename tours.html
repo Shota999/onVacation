@@ -15,6 +15,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/animated.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
@@ -69,17 +70,14 @@
         <div class="main_container" id="tours">
             <div class="menu">
                 <ul>
-                    <li><a href="#" class="active">All</a></li>
-                    <li><a href="#">Europe</a></li>
-                    <li><a href="#">Spain</a></li>
-                    <li><a href="#">Tour</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Trip</a></li>
+                    <li><a class="active btn" id="all">All</a></li>
+                    <li><a  class="btn" id="europe">Europe</a></li>
+                    <li><a  class="btn" id="travel">Travel</a></li>
                 </ul>
             </div>
-            <div class="tour_container" v-for="item in items">
+            <div class="tour_container" v-for="item in items" v-bind:class="{ 'travel': item['category'] == 'travel' , 'europe': item['category'] == 'europe' }">
                 <div class="tour_image">
-                    <a href="#" v-if="item.image"><img :src="item.image"></a>
+                    <a href="#" v-if="item.image"><img :src="item.image" class="animated slideInDown"></a>
                 </div>
                 <div class="tour_text">
                     <span> {{item.date}} by <a v-if="item.athor" :href="'/userxxxxxxx/'+ item.athor.id"> admin </a></span>
@@ -192,6 +190,18 @@
         $('.header_btn').click(function () {
             $('.hidden_container').toggleClass('show');
         });
+
+
+        var $btns = $('.btn').click(function () {
+            if (this.id == 'all') {
+                $('.tour_container').fadeIn(450);
+            } else {
+                var $el = $('.' + this.id).fadeIn(450);
+                $('.tour_container').not($el).hide();
+            }
+            $btns.removeClass('active');
+            $(this).addClass('active');
+        })
     </script>
 </body>
 

@@ -10,7 +10,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 1
-            }
+            },
+            category:['europe']
         },
         {
             name: 'Spain',
@@ -20,7 +21,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 2
-            }
+            },
+            category:['travel']
         },
         {
             name: 'United Kingdom',
@@ -30,7 +32,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 3
-            }
+            },
+            category:['europe']
         },
         {
             name: 'Easten Europe',
@@ -40,7 +43,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 4
-            }
+            },
+            category:['travel']
         },
         {
             name: 'Italy',
@@ -50,7 +54,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 5
-            }
+            },
+            category:['europe']
         },
         {
             name: 'Swiss Alps',
@@ -60,7 +65,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 6
-            }
+            },
+            category:['travel']
         },
         {
             name: 'France',
@@ -70,7 +76,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 6
-            }
+            },
+            category:['europe']
         },
         {
             name: 'Europe',
@@ -80,7 +87,8 @@ new Vue({
             detail: 'View Details',
             athor: {
                 id: 6
-            }
+            },
+            category:['travel']
         },
     ]
     },

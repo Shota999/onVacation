@@ -934,6 +934,7 @@ footer {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
+        padding: 0 20px;
 
         .menu {
             margin: 7px 12px 29px;
@@ -969,6 +970,7 @@ footer {
             display: flex;
             justify-content: flex-start;
             margin-bottom: 20px;
+            overflow: hidden;
 
             .tour_image {
                 margin-right: 30px;
@@ -982,6 +984,11 @@ footer {
                         max-width: 370px;
                         height: 310px;
                         object-fit: cover;
+                        transition: .4s;
+
+                        &:hover{
+                            opacity: 0.1;
+                        }
                     }
 
                     &:before {
@@ -1223,6 +1230,8 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
+        align-items: center;
 
         h3 {
             line-height: 1.344;
@@ -1248,7 +1257,6 @@ footer {
             padding: 10px 35px;
             margin-top: 25px;
             transition: .3s;
-            width: 24%;
 
             &:hover {
                 background-color: #53b2ad;
@@ -1258,7 +1266,7 @@ footer {
 }
 
 .team_container {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 
     .team_title {
@@ -1377,7 +1385,6 @@ footer {
 
 .our_skills {
     width: 100%;
-    height: 500px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
