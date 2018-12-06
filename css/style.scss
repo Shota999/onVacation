@@ -1575,6 +1575,11 @@ footer {
                     a {
                         margin-top: 25px;
                         color: #d0d0d4;
+                        transition: .3s;
+
+                        &:hover{
+                            color: #aaaaaa;
+                        }
                     }
                 }
             }

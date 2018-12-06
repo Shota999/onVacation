@@ -1897,6 +1897,12 @@ footer .footer_container .footer_icons a i {
 .main_container .left_side .left_side_container .left_container .icons a {
   margin-top: 25px;
   color: #d0d0d4;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main_container .left_side .left_side_container .left_container .icons a:hover {
+  color: #aaaaaa;
 }
 
 .main_container .left_side .left_side_container .center_container {
