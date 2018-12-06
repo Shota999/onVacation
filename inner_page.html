@@ -58,35 +58,108 @@
             </nav>
         </div>
     </div>
-    <div class="top_container">
-        <div class="top_title">
-            <h2>ALL Tours For You</h2>
-            <p>650 tours found</p>
+    <div class="main_container">
+        <div class="left_side">
+            <div class="left_side_container">
+                <div class="left_container inner_container">
+                    <div class="date_container">
+                        <p>14</p>
+                        <span>APR</span>
+                    </div>
+                    <div class="icons">
+                        <a href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/?lang=en">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/?hl=en">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="center_container inner_container">
+                    <div class="title_container">
+                        <h2>Turkey</h2>
+                        <span>By <a href="#">Admin</a> in Europe</span>
+                    </div>
+                    <div class="images_container">
+                        <div class="image_container">
+                            <img src="images/tour_images/pr-1-1024x452.jpg" alt="image">
+                        </div>
+                        <div class="images">
+                            <div class="image_container right">
+                                <img src="images/background-29-1920x900-1024x480.jpg" alt="image">
+                            </div>
+                            <div class="image_container">
+                                <img src="images/background-28-1920x900-1024x480.jpg" alt="image">
+                            </div>
+                        </div>
+                        <div class="images">
+                            <div class="image_container right">
+                                <img src="images/background-27-1920x900.jpg" alt="image">
+                            </div>
+                            <div class="image_container">
+                                <img src="images/recent3.jpg" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review_container">
+                        <h3>Project Overview</h3>
+                        <span>Istanbul, Antalya, Ephesus • 8 days</span>
+                        <p>Start your Eastern Europe trip from Berlin – one of the most attractive European cities.
+                            Head out to Warsaw – the capital of Poland, where you’ll be able to take a guided tour
+                            through the city’s places of interests and museums. Enjoy all Prague has to offer. Opt to
+                            visit the famous Charles Bridge, the clock tower in the main square or a traditional Czech
+                            beer hall with serious helpings of meat and potatoes. Opt to have lunch in one of the many
+                            pretty restaurants offering fantastic local cuisine, sitting on a terrace overlooking this
+                            fairytale medieval town.</p>
+                        <p>End your Eastern Europe tour by visiting two most renowned European cities – Vienna and
+                            Budapest. Wander the elegant streets a little more, take in some of Europe’s most
+                            distinguished art galleries or just settle yourself on a café terrace, order up a slice of
+                            mouthwatering Viennese cake and watch the world go by over coffee.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="form_container">
+                <h4>Leave a reply</h4>
+                <p>Your email address will not be published. Required fields are marked *</p>
+                <form action="action.php" method="get">
+                    <textarea name="comment" rows="7" placeholder="Your comment"></textarea>
+                    <div class="input_container">
+                        <input type="text" name="name" placeholder="Your name">
+                        <input type="email" name="e-mail" placeholder="Your e-mail">
+                        <input type="text" name="website" placeholder="Your website">
+                    </div>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+        </div>
+        <div class="right_side">
+            <div class="images_container">
+                <div class="image_container">
+                    <img src="images/tour_images/pr-1-1024x452.jpg" alt="image">
+                    <div class="text_container">
+                        <span>April, 14 2017 by <a href="#">Admin</a> in Europe</span>
+                        <h2><a href="inner_page.html">Turkey</a></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="images_container">
+                    <div class="image_container">
+                        <img src="images/offer2.jpg" alt="image">
+                        <div class="text_container">
+                            <span>April, 14 2017 by <a href="#">Admin</a> in Span</span>
+                            <h2><a href="inner_page.html">Spain</a></h2>
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
-    <div class="body">
-        <div class="main_container" id="tours">
-            <div class="menu">
-                <ul>
-                    <li><a class="active btn" id="all">All</a></li>
-                    <li><a class="btn" id="europe">Europe</a></li>
-                    <li><a class="btn" id="travel">Travel</a></li>
-                </ul>
-            </div>
-            <div class="tour_container" v-for="item in items" v-bind:class="{ 'travel': item['category'] == 'travel' , 'europe': item['category'] == 'europe' }">
-                <div class="tour_image">
-                    <a href="#" v-if="item.image"><img :src="item.image" class="animated slideInDown"></a>
-                </div>
-                <div class="tour_text">
-                    <span> {{item.date}} by <a v-if="item.athor" :href="'/userxxxxxxx/'+ item.athor.id"> admin </a></span>
-                    <h3><a href="inner_page.html">{{item.name}}</a></h3>
-                    <p>{{item.text}}</p>
-                    <a href="inner_page.html" class="details">{{item.detail}}</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
+    <footer class="border">
         <div class="footer_container">
             <div class="footer_image">
                 <a href="index.html"><img src="images/footer-logo.png" alt="logo"></a>
@@ -159,15 +232,6 @@
     <script src="js/tours.js"></script>
 
     <script>
-        $('.top_container').parallax({
-            imageSrc: 'images/background-38-1920x900.jpg'
-        });
-
-        // Aos
-
-        AOS.init();
-
-
         // ===== Scroll to Top ==== 
         $(window).scroll(function () {
             if ($(this).scrollTop() >= 50) { // If page is scrolled more than 50px
@@ -188,18 +252,6 @@
         $('.header_btn').click(function () {
             $('.hidden_container').toggleClass('show');
         });
-
-
-        var $btns = $('.btn').click(function () {
-            if (this.id == 'all') {
-                $('.tour_container').fadeIn(450);
-            } else {
-                var $el = $('.' + this.id).fadeIn(450);
-                $('.tour_container').not($el).hide();
-            }
-            $btns.removeClass('active');
-            $(this).addClass('active');
-        })
     </script>
 </body>
 

@@ -1,6 +1,7 @@
 $tablet-width: 768px;
 $phone-width: 375px;
 $desktop-width: 765px;
+$desktop-s: 970px;
 
 @media (min-width: #{$desktop-width}) {
     // About
@@ -24,6 +25,36 @@ $desktop-width: 765px;
             display: none;
         }
     }
+    
+}
+@media (max-width: #{$desktop-s}) {
+    // About
+
+    // .work_container{
+    //     .work_images{
+    //         // flex-direction: column;
+    //         align-items: center;
+
+    //         img{
+    //             margin-top: 30px;
+
+    //             &:first-child{
+    //                 margin-top: 0;
+    //             }
+    //         }
+    //     }
+    // }
+    .traveling_container{
+        .image{
+            display: none;
+        }
+    }
+    .main_container{
+        .right_side{
+            display: none;
+        }
+    }
+    
 }
 
 @media (max-width: #{$tablet-width}) {
@@ -380,6 +411,30 @@ $desktop-width: 765px;
             }
         }
     }
+
+    // Inner_page
+    
+    .main_container{
+        .left_side{
+            .form_container{
+                .input_container{
+                    flex-direction: column;
+                    margin: 10px;
+
+                    input{
+                        margin-top: 20px;
+
+                        &:first-child{
+                            margin-top: 0;
+                        }
+                    }
+                }
+                button{
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: #{$phone-width}) {
@@ -417,5 +472,16 @@ $desktop-width: 765px;
 
     .flight_container {
         display: none;
+    }
+    .main_container{
+        .left_side{
+            .left_side_container{
+                .center_container{
+                    .images_container{
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
